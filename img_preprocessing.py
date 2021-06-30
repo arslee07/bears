@@ -14,7 +14,6 @@ def rgb_to_hsv(r, g, b):
     _r = r / 255
     _g = g / 255
     _b = b / 255
-
     cmax = max([_r, _g, _b])
     cmin = min([_r, _g, _b])
     delta = cmax - cmin
@@ -83,9 +82,11 @@ def correct_brightness(img):
 
     return img
 
+
 # TODO
 def clear_near_dots(collection, key, radius=50):
     pass
+
 
 # TODO
 def adaptive_search(img, find_level):
