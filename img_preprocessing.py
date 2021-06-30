@@ -104,19 +104,19 @@ for i in os.listdir(path):
 
     # HUE - 40..50
 
-    mean = []
+    # mean = []
 
-    for row in range(len(source)):
-        for cell in range(len(source[row])):
-            _cell = list(source[row][cell])
-            hsv = rgb_to_hsv(*_cell[::-1])
-            # Compare hue
-            if 45 <= hsv[0] <= 60:
-                # Compare saturation
-                if 10 <= hsv[1]:
-                    # Compare value
-                    if 20 <= hsv[2]:
-                        mean.append(((cell, row), hsv))
+    # for row in range(len(source)):
+    #     for cell in range(len(source[row])):
+    #         _cell = list(source[row][cell])
+    #         hsv = rgb_to_hsv(*_cell[::-1])
+    #         # Compare hue
+    #         if 45 <= hsv[0] <= 60:
+    #             # Compare saturation
+    #             if 10 <= hsv[1]:
+    #                 # Compare value
+    #                 if 20 <= hsv[2]:
+    #                     mean.append(((cell, row), hsv))
 
     # mean = clear_near_dots(mean, key=lambda x: x[0])
     # print(*mean, sep='\n')
