@@ -46,7 +46,7 @@ class Utils:
     @staticmethod
     def is_nearby_dots(coords1: Tuple[int, int], coords2: Tuple[int, int], radius: int = 20):
         return abs(coords1[0] - coords2[0]) <= radius and \
-               abs(coords1[1] - coords2[1]) <= radius
+            abs(coords1[1] - coords2[1]) <= radius
 
     # Удаляет все точки находящиеся в близости с другими в опр радиусе
     @staticmethod
@@ -100,3 +100,18 @@ class Utils:
     def default_image_preprocessing(img):
         img = Utils.correct_brightness(img)
         return cv2.addWeighted(img, 2, img, 0, -127)
+
+    # IMG - изображение на котором нужно покрасить
+    # x1 x2 это верний левый угол и нижний левый угол, с y[1-2] аналогично
+    @staticmethod
+    def set_rect(img, x1, y1, x2, y2):
+        return cv2.cvtColor(
+            cv2.rectangle(
+                cv2.cvtColor(img, cv2.COLOR_BGR2RGB),
+                (x1, y1),
+                (x2, y2),
+                (0, 255, 255),
+                20
+            ),
+            cv2.COLOR_RGB2BGR
+        )
