@@ -1,8 +1,6 @@
-from typing import Any, List, Tuple, Callable
 from utils import Utils
 import cv2
 import numpy as np
-import os
 import math
 
 # Contrast ( source, constast_multiplier, source, 0, brightness )
@@ -11,16 +9,19 @@ import math
 
 class Preprocessor:
     # Сет файла для работы с оным
-    @staticmethod
-    def set_file(file_path: str) -> None:
-        Preprocessor.file = cv2.imread(file_path)
+    def __init__(self, file: str or np.ndarray) -> None:
+        if file is str:
+            self.file = cv2.imread(file)
+        elif file is np.ndarray:
+            self.file = file
+        else:
+            raise ValueError('Invalid file type!')
         Preprocessor.compressor = 1
 
     # Получить точки с оранжевым оттенком
-    @staticmethod
-    def get_dots(compress_multimplier: int = 4):
-        Preprocessor.compressor = compress_multimplier
-        file = Preprocessor.file
+    def get_dots(self, compress_multimplier: int = 4):
+        self.compressor = compress_multimplier
+        file = self.file
         img = Utils.default_image_preprocessing(cv2.resize(
             file,
             (math.floor(file.shape[1] / compress_multimplier),
@@ -40,20 +41,18 @@ class Preprocessor:
         return Utils.clear_nearby_dots(dots)
 
     # Показать текузий файл
-    @staticmethod
-    def show():
-        cv2.imshow('Image', Preprocessor.file)
+    def show(self):
+        cv2.imshow('Image', self.file)
         cv2.waitKey(0)
 
     # Вырезать квадраты с точками
-    @staticmethod
-    def get_rects(dots, side=100):
+    def get_rects(self, dots, side=100):
         size = math.floor(side / 2)
         rects = []
-        img = Preprocessor.file
+        img = self.file
         height, width = img.shape[:2]
         for (index, item) in enumerate(dots):
-            dot = [item[0] * Preprocessor.compressor, item[1] * Preprocessor.compressor]
+            dot = [item[0] * self.compressor, item[1] * self.compressor]
             
             # TOP BOTTOM LEFT RIGHT
             sides = {
