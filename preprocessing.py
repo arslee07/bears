@@ -1,3 +1,4 @@
+import typing
 from utils import Utils
 import cv2
 import numpy as np
@@ -10,11 +11,12 @@ import math
 class Preprocessor:
     # Сет файла для работы с оным
     def __init__(self, file: str or np.ndarray) -> None:
-        if file is str:
+        if type(file) is str:
             self.file = cv2.imread(file)
-        elif file is np.ndarray:
+        elif type(file) is np.ndarray:
             self.file = file
         else:
+            print(type(file))
             raise ValueError('Invalid file type!')
         Preprocessor.compressor = 1
 
