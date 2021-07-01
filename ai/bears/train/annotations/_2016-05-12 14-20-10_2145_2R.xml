@@ -1,0 +1,38 @@
+<annotation>
+	<folder>images</folder>
+	<filename>_2016-05-12 14-20-10_2145_2R.JPG</filename>
+	<path>/home/arslee/Projects/bears/ai/bears/train/images/_2016-05-12 14-20-10_2145_2R.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>7360</width>
+		<height>4912</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>917</xmin>
+			<ymin>1367</ymin>
+			<xmax>982</xmax>
+			<ymax>1436</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>875</xmin>
+			<ymin>1678</ymin>
+			<xmax>908</xmax>
+			<ymax>1719</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>images</folder>
+	<filename>2016-05-18 12-39-15_2042_r_3C.JPG</filename>
+	<path>/home/arslee/Projects/bears/ai/bears/train/images/2016-05-18 12-39-15_2042_r_3C.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>7360</width>
+		<height>4912</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3769</xmin>
+			<ymin>4101</ymin>
+			<xmax>3801</xmax>
+			<ymax>4173</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3747</xmin>
+			<ymin>4169</ymin>
+			<xmax>3782</xmax>
+			<ymax>4229</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3768</xmin>
+			<ymin>4243</ymin>
+			<xmax>3812</xmax>
+			<ymax>4297</ymax>
+		</bndbox>
+	</object>
+</annotation>

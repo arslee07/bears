@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>2016-04-25 14-09-54_2051_r_C.JPG</filename>
+	<path>/home/arslee/Projects/bears/ai/bears/validation/images/2016-04-25 14-09-54_2051_r_C.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>7360</width>
+		<height>4912</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>5797</xmin>
+			<ymin>2957</ymin>
+			<xmax>5838</xmax>
+			<ymax>3023</ymax>
+		</bndbox>
+	</object>
+</annotation>
