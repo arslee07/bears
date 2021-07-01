@@ -5,7 +5,7 @@ from cv2 import imshow, waitKey
 path = 'bears_data/withBears/_2016-04-25 11-06-03_2568_L.JPG'
 Preprocessor.set_file(path)
 
-dots = Preprocessor.get_dots(10)
+dots = Preprocessor.get_dots()
 print(*dots, sep='\n')
 rects = Preprocessor.get_rects(dots, 200)
 

@@ -26,12 +26,15 @@ class Preprocessor:
             (math.floor(file.shape[1] / compress_multimplier),
              math.floor(file.shape[0] / compress_multimplier))
         ))
-        def hue(x): return 30 < x < 60
+        def hsv_check(h, s, v):
+            return 30 < h < 60 and \
+                   15 < s and \
+                   40 < v
         dots = []
         for row in range(len(img)):
             for cell in range(len(img[row])):
                 hsv = Utils.rgb_to_hsv(*list(img[row][cell])[::-1])
-                if hue(hsv[0]):
+                if hsv_check(*hsv):
                     dots.append([cell, row])
 
         return Utils.clear_nearby_dots(dots)
