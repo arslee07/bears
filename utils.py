@@ -46,11 +46,11 @@ class Utils:
     @staticmethod
     def is_nearby_dots(coords1: Tuple[int, int], coords2: Tuple[int, int], radius: int = 20):
         return abs(coords1[0] - coords2[0]) <= radius and \
-            abs(coords1[1] - coords2[1]) <= radius
+               abs(coords1[1] - coords2[1]) <= radius
 
     # Удаляет все точки находящиеся в близости с другими в опр радиусе
     @staticmethod
-    def clear_nearby_dots(dots: List[List[int]], rng=100) -> List[Tuple[int, int]]:
+    def clear_nearby_dots(dots: List[List[int]], rng=200) -> List[Tuple[int, int]]:
         dots.sort(key=lambda x: x[0])
         current = dots[0]
         result = [current]

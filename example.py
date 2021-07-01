@@ -2,12 +2,13 @@ from utils import Utils
 from preprocessing import Preprocessor
 from cv2 import imshow, waitKey
 
-path = 'some path'
+path = 'bears_data/withBears/_2016-04-25 11-06-03_2568_L.JPG'
 Preprocessor.set_file(path)
 
-dots = Preprocessor.get_dots()
+dots = Preprocessor.get_dots(10)
 print(*dots, sep='\n')
 rects = Preprocessor.get_rects(dots, 200)
 
-imshow('img', rects[0])
-waitKey(0)
+for i in rects:
+    imshow('img', i)
+    waitKey(0)

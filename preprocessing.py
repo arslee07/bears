@@ -72,8 +72,8 @@ class Preprocessor:
                 sides['right'] += abs(sides['left'])
                 sides['left'] = 0
             
-            if sides['right'] > height:
-                sides['left'] -= sides['right'] - height
+            if sides['right'] > width:
+                sides['left'] -= sides['right'] - width
                 sides['right'] = width - 1
             
             rects.append(img[sides['top']:sides['bottom'], sides['left']:sides['right']])
